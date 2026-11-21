@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Single-cell Dataset Catalogue</title>
+<script>
+(function () {
+  try { document.documentElement.setAttribute('data-theme', localStorage.getItem('sccat-theme') || 'light'); }
+  catch (_) { document.documentElement.setAttribute('data-theme', 'light'); }
+})();
+</script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="bar">
+  <div class="brand">Single-cell Dataset Catalogue <small>human scRNA / snRNA, all tissues</small></div>
+  <nav class="nav">
+    <a href="#/catalogue" data-view="catalogue">Catalogue</a>
+    <a href="#/summary" data-view="summary">Summary</a>
+    <a href="#/organ" data-view="organ">Organs</a>
+    <a href="#/celltype" data-view="celltype">Cell types</a>
+    <a href="#/disease" data-view="disease">Diseases</a>
+    <a href="#/about" data-view="about">About</a>
+  </nav>
+  <div class="spacer"></div>
+  <span class="stamp" id="stamp"></span>
+  <button class="btn" id="theme-toggle" type="button">Dark mode</button>
+</header>
+<main>
+  <section id="view-catalogue" data-view="catalogue" hidden></section>
+  <section id="view-dataset" data-view="dataset" hidden></section>
+  <section id="view-summary" data-view="summary" hidden></section>
+  <section id="view-organ" data-view="organ" hidden></section>
+  <section id="view-respiratory" data-view="respiratory" hidden></section>
+  <section id="view-celltype" data-view="celltype" hidden></section>
+  <section id="view-disease" data-view="disease" hidden></section>
+  <section id="view-about" data-view="about" hidden></section>
+</main>
+<script src="lib/plotly.min.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/catalogue.js"></script>
+<script src="js/dataset.js"></script>
+<script src="js/respiratory.js"></script>
+<script src="js/summary.js"></script>
+<script src="js/organ.js"></script>
+<script src="js/lenses.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
